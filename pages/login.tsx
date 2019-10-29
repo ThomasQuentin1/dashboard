@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 
 // const MongoClient = require('mongodb').MongoClient;
 // const dburl = 'mongodb://localhost:27017';
@@ -39,11 +41,11 @@ export default class Login extends React.Component<Props, State> {
         <h3> Username </h3>
           <input type="text" name="username" value={this.state.userName} onChange={this.handleChangeUserName.bind(this)}/>
         <h3> Password </h3>
-          <input type="text" name="password" value={this.state.password} onChange={this.handleChangePassword.bind(this)}/>
+          <input type="password" name="password" value={this.state.password} onChange={this.handleChangePassword.bind(this)}/>
         <button onClick={ () => {this.submit()}}>
-          login
+          Sing in
         </button>
-
+        <Link href='/register'><a>Register</a></Link>
       </div>
     )
   }

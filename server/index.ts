@@ -15,8 +15,8 @@ app.prepare().then(() => {
 
     if (pathname === '/login') {
       app.render(req, res, '/login', query)
-    } else if (pathname === '/b') {
-      app.render(req, res, '/b', query)
+    } else if (pathname === '/register') {
+      app.render(req, res, '/register', query)
     } else {
       handle(req, res, parsedUrl)
     }
